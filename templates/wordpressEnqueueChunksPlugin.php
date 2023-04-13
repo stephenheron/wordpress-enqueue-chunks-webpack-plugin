@@ -136,9 +136,9 @@ function makeScriptArgs($asset, array $data)
     $handle = makeHandle($asset);
     $src = getAssetUrl($data['file'], get('context'));
     $deps = mapDependencies($asset);
-    $version = $data['hash'];
-    $inFooter = true; // @TODO: expose this to the user
-    return compact('handle', 'src', 'deps', 'version', 'inFooter');
+    $ver = $data['hash'];
+    $in_footer = true; // @TODO: expose this to the user
+    return compact('handle', 'src', 'deps', 'ver', 'in_footer');
 }
 
 /**
